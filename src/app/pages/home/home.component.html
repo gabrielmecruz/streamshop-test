@@ -1,0 +1,38 @@
+<div class="home-content col-sm-12 animate__animated animate__fadeIn">
+
+  <div class="search">
+
+    <input type="text" [(ngModel)]="searchText" (input)="search()" placeholder="Pesquisar">
+
+  </div>
+
+  <div class="list_collections row">
+
+    <div class="collections col-sm-12 d-flex justify-content-center flex-wrap gap-4">
+
+      <div class="movie" *ngFor="let movie of moviesCol">
+
+        <div class="img">
+
+          <img [src]="movie.image">
+
+        </div>
+
+        <div class="details">
+
+          <strong class="title d-flex align-itens-center">{{movie.title}}</strong>
+
+        </div>
+
+        <div class="genres">{{movie.genres}}</div>
+
+        <div class="button-submit" (click)="onSelected(movie)">
+          <button>Comprar</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

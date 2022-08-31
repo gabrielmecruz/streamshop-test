@@ -1,0 +1,31 @@
+.modal {
+  animation: fade 1.2s ease-in-out 2 alternate forwards;
+  background-color: blue;
+}
+
+@mixin overlay() {
+
+  .cdk-overlay-container,
+  .cdk-global-overlay-wrapper {
+    pointer-events: none;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: green;
+  }
+
+  .cdk-overlay-pane {
+    background-color: red;
+  }
+
+  .cdk-overlay-dark-backdrop {
+    background: var(--color-button-primary) !important;
+    ;
+  }
+
+  .mat-dialog-actions {
+    color: var(--color-primary);
+  }
+}

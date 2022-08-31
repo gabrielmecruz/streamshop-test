@@ -1,0 +1,55 @@
+<div class="theater-content">
+
+  <div class="movie">
+
+    <div class="movie-img">
+      <img [src]="selectedMovie?.image" alt="">
+    </div>
+
+    <div class="movie-title">{{selectedMovie?.title}}</div>
+
+  </div>
+
+  <div class="theaters">
+
+    <div class="t-details" *ngFor="let theater of theaters; let i = index">
+
+      <div class="theater">
+
+        <div class="t-name">
+          <div class="heart">
+            <img src="./../../../assets/heart.png" alt="">
+          </div> {{theater.name}}
+        </div>
+
+        <div class="t-address">{{theater.address}} -
+          <div class="complement">{{theater.addressComplement}}</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="rooms">
+
+          <div class="room" *ngFor="let room of theater.rooms[0].types">
+            <div class="room-num">{{theater.rooms[0].name}} -</div>
+            <div class="room-type">{{type}}</div>
+          </div>
+
+        </div>
+
+
+        <div class="sessions">
+
+          <div class="session" *ngFor="let session of theater.rooms[0].sessions">
+            <button class="time" (click)="navigateTo('/pages/signup')">{{session.time}}</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

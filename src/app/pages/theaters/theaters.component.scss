@@ -1,0 +1,137 @@
+.theater-content {
+  width: 100%;
+  height: 100%;
+
+  .movie {
+    display: flex;
+    flex-direction: column;
+
+    .movie-img {
+      height: 184px;
+      text-align: center;
+      padding: 9px 0;
+
+      img {
+        overflow: hidden;
+        height: 100%;
+      }
+    }
+  }
+
+  .movie-title {
+    padding-left: 206px;
+    padding-bottom: 9px;
+    font-size: 20px;
+    text-align: left;
+    letter-spacing: 0.4px;
+  }
+
+  .theaters {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .t-details {
+      display: flex;
+      flex-direction: column;
+      margin: 0 190px;
+      background-color: #F1F3F4;
+      border-radius: 2px;
+
+      .theater {
+        padding: 12px;
+
+        .t-name {
+          display: flex;
+          flex-direction: row;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 0.32px;
+          gap: 8px;
+
+          .heart {
+            height: 17px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .t-address {
+          display: flex;
+          flex-direction: row;
+          font-size: 12px;
+          letter-spacing: 0.24px;
+
+          .complement {
+            text-indent: 4px;
+          }
+        }
+
+        .divider {
+          width: 100%;
+          border: 1px solid black;
+          margin: 6px 0;
+          opacity: 0.2;
+        }
+
+        .rooms {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+
+          .room {
+            display: flex;
+            flex-direction: row;
+            font-size: 12px;
+
+            .room-type {
+              text-indent: 4px;
+              color: #FF7300DD;
+            }
+          }
+        }
+
+        .sessions {
+          display: flex;
+          flex-direction: row;
+          padding-top: 9px;
+
+          .time {
+            margin-right: 16px;
+            padding: 6px 26px;
+            font-size: 14px;
+            border: 1px solid #1860B3DD;
+            color: #1860B3DD;
+            border-radius: 2px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 999px) {
+  .movie-title {
+    padding: 0 10% !important;
+    text-align: center !important;
+  }
+
+  .t-details {
+    margin: 0 10% !important;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 499px) {
+  .movie-title {
+    padding: 0 5% !important;
+    text-align: center !important;
+  }
+
+  .t-details {
+    margin: 0 5% !important;
+  }
+}

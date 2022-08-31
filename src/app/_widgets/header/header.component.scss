@@ -1,0 +1,32 @@
+.header-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 40%;
+  padding: 0 12px;
+
+  .logo {
+    cursor: pointer;
+
+    img {
+      max-width: 224px;
+    }
+  }
+
+  fa-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(184deg) brightness(107%) contrast(101%);
+  }
+
+}
+
+@media screen and (min-width: 100px) and (max-width: 999px) {
+  .header-content {
+    gap: 0 !important;
+    justify-content: center !important;
+
+    .back-button {
+      display: none !important;
+    }
+  }
+}
